@@ -10,6 +10,11 @@ DENSE_RANK() over( order by salary DESC) as d_rnk
 from employee
 
 
+-- Highest salary in each department
+select *,ROW_NUMBER() over( partition by department order by salary DESC) as rn,
+RANK() over( partition by department order by salary DESC) as rnk ,
+DENSE_RANK() over( partition by department order by salary DESC) as d_rnk 
+from employee
 
 
 
