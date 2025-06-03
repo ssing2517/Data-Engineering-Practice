@@ -16,6 +16,8 @@ RANK() over( partition by department order by salary DESC) as rnk ,
 DENSE_RANK() over( partition by department order by salary DESC) as d_rnk 
 from employee
 
-
+--2nd highest salary in each department
+select * from (select *,DENSE_RANK() over(partition by department order by salary desc) as rnk from employee) 
+where rnk=2
 
 
