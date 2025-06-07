@@ -1,0 +1,5 @@
+update Employee
+set Gender= 
+            case when Gender='Male' then 'Female'
+                 when Gender='Female' then 'Male'
+            end
