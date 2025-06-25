@@ -1,0 +1,9 @@
+--ends with vowels
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '[aeiouAEIOU]$';
+
+--starts with vowels
+SELECT DISTINCT CITY
+FROM STATION
+WHERE CITY REGEXP '^[aeiouAEIOU]';
